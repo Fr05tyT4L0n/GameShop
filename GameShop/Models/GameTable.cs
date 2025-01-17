@@ -8,7 +8,7 @@ namespace GameShop.Models
         [Key]
         public int gameId { get; set; }
         public string gameName { get; set; }
-        public float gamePrice { get; set; }
+        public double gamePrice { get; set; }
         public int gameStock { get; set; }
         public string gameImage { get; set; }
 

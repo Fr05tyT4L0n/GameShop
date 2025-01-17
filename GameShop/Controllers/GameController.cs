@@ -16,10 +16,10 @@ namespace GameShop.Controllers
         }
         public IActionResult Index()
         {
-            IEnumerable<GameTable> games = _context.GameTable
+            IEnumerable<GameTable> game = _context.GameTable
                 .Include(b => b.category)
                 .ToList();
-            return View(games);
+            return View(game);
         }
     }
 }

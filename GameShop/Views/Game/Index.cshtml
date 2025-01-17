@@ -1,0 +1,35 @@
+﻿@model IEnumerable<GameShop.Models.GameTable>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var game in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 hov" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 15px; overflow: hidden;">
+                    <img src="@game.gameImage" class="card-img-top" alt="@game.gameName" style="height: 500px; object-fit: cover; background-size: cover; background-repeat: no-repeat;" />
+                    <div class="card-body">
+                        <h3 class="card-title" style="font-weight: bold; text-align: center;">@game.gameName</h3>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .hov {
+        transition: .3s ease all;
+    }
+
+        .hov:hover {
+            background: green;
+            color: white;
+            cursor: pointer;
+            transform: scale(.95);
+        }
+</style>
