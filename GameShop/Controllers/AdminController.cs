@@ -30,7 +30,10 @@ namespace GameShop.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<GameTable> books = _context.GameTable
+                .Include(b => b.category)
+                .ToList();
+            return View(books);
         }
     }
 }
