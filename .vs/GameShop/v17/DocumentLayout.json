@@ -50,8 +50,7 @@
               "RelativeToolTip": "GameShop\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-25T14:48:12.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T14:48:12.633Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "GameShop\\Views\\Game\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-19T05:14:18.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T05:14:18.324Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "GameShop\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T05:13:42.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T05:13:42.358Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "GameShop\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAswGsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T14:39:53.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T14:39:53.507Z"
             },
             {
               "$type": "Document",
@@ -102,8 +98,7 @@
               "RelativeToolTip": "GameShop\\Controllers\\AdminController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwAkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T04:55:49.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T04:55:49.501Z"
             },
             {
               "$type": "Document",
@@ -115,8 +110,7 @@
               "RelativeToolTip": "GameShop\\Views\\Admin\\Index.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-19T04:50:55.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T04:50:55.46Z"
             },
             {
               "$type": "Document",
@@ -126,7 +120,7 @@
               "RelativeDocumentMoniker": "GameShop\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "GameShop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-19T04:48:40.175Z",
               "EditorCaption": ""
