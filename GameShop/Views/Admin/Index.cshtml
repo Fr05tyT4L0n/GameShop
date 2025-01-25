@@ -30,11 +30,11 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
-                int index = 1;
+                @* int index = 1; *@
                 foreach (var game in Model)
                 {
                     <tr>
-                        <td>@index</td>
+                        <td>@game.gameId</td>
                         <td class="text-center">
                             <img src="@game.gameImage" alt="@game.gameName" style="width: 100px; height: 100px; object-fit: cover;">
                         </td>

@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 using GameShop.Data;
 using GameShop.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GameShop.Controllers
 {
+    //[Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context;
