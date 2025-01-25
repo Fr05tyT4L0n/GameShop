@@ -17,57 +17,55 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GameShop
 build_property.RootNamespace = GameShop
-build_property.ProjectDir = C:\Users\Takdanai Duangporn\Documents\z_C# MVC\GameShop\GameShop\
+build_property.ProjectDir = D:\Backup\SIT11_C#_Project\GameShop\GameShop\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Takdanai Duangporn\Documents\z_C# MVC\GameShop\GameShop
+build_property.MSBuildProjectDirectory = D:\Backup\SIT11_C#_Project\GameShop\GameShop
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Account/Login.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Account/Register.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Admin/Index.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Game/Index.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Game/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Home/Index.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Home/Privacy.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Shared/Error.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/_ViewImports.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/_ViewStart.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Takdanai Duangporn/Documents/z_C\# MVC/GameShop/GameShop/Views/Shared/_Layout.cshtml]
+[D:/Backup/SIT11_C\#_Project/GameShop/GameShop/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yyj6kdgg06
