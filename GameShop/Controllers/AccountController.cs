@@ -114,6 +114,9 @@ namespace GameShop.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            Response.Cookies.Delete("Cookie");
+
             return RedirectToAction("Login", "Account");
         }
     }

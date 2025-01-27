@@ -4,7 +4,7 @@
 }
 
 <div class="container">
-    <h1>Games</h1>
+    <h1>เกมทั้งหมด</h1>
 </div>
 
 <div class="container my-4">
@@ -13,17 +13,17 @@
         {
             <div class="col">
                 <div class="card h-100" style="border-radius: 10px; overflow: hidden;">
-                    <img src="@game.gameImage" class="card-img-top" alt="@game.gameName" style="height: 300px; object-fit: cover;" />
+                    <img src="@game.gameImage" class="card-img-top" alt="@game.gameName" style="height: 350px; object-fit: cover;" />
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">@game.gameName</h5>
-                        <p class="card-text text-muted">This is a brief detail about @game.gameName. An Open World game Triple A game.</p>
+                        @* <p class="card-text text-muted">เกี่ยวกับเกมนั้น อธิบาย...</p> *@
                         <div class="d-flex justify-content-between py-2 mt-auto">
-                            <p class="card-text mb-0">Stock: <strong>@game.gameStock</strong></p>
-                            <p class="card-text mb-0">Price: <strong>@game.gamePrice</strong></p>
+                            <p class="card-text mb-0">คงเหลือ : <strong class="text-success">@game.gameStock</strong> ชิ้น</p>
+                            <p class="card-text mb-0">ราคา : <strong class="text-danger">@game.gamePrice</strong> บาท</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-success w-100">BUY</a>
+                        <a href="/" class="btn btn-success w-100">สั่งซื้อ</a>
                     </div>
                 </div>
             </div>
