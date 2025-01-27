@@ -36,3 +36,32 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @if (TempData["AlertMessage"] != null)
+    {
+        <script>
+            var alertType = '@TempData["AlertType"]';
+            var userRole = '@TempData["UserRole"]';
+
+            Swal.fire({
+                title: 'แจ้งเตือน',
+                text: '@Html.Raw(TempData["AlertMessage"])',
+                icon: alertType,
+                confirmButtonText: 'OK',
+                allowOutsideClick: true,
+                showCancelButton: false,
+                timer: alertType === "error" ? null : 3000, // No timer for errors
+                timerProgressBar: alertType !== "error",
+            }).then((result) => {
+                if (alertType === "success") {
+                    if (userRole === "Admin") {
+                        window.location.href = '@Url.Action("Index", "Admin")';
+                    } else {
+                        window.location.href = '@Url.Action("Index", "Game")';
+                    }
+                }
+            });
+        </script>
+    }
+}

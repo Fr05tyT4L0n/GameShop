@@ -31,7 +31,8 @@ namespace GameShop.Controllers
 
             if (user == null)
             {
-                ViewBag.ErrorMessage = "Username Or Email are invalid.";
+                TempData["AlertMessage"] = "Username หรือ Email ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง";
+                TempData["AlertType"] = "error";
                 return View();
             }
 
@@ -46,65 +47,70 @@ namespace GameShop.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-            if (user.userRole == "Admin")
-            {
-                return RedirectToAction("Index", "Admin");
-            }
-            else
-            {
-                return RedirectToAction("Index", "Game");
-            }
+            TempData["UserRole"] = user.userRole;
+            TempData["AlertMessage"] = "เข้าสู่ระบบสำเร็จ";
+            TempData["AlertType"] = "success";
+
+            //if (user.userRole == "Admin")
+            //{
+            //    return RedirectToAction("Index", "Admin");
+            //}
+            //else
+            //{
+            //    return RedirectToAction("Index", "Game");
+            //}
+
+            //return RedirectToAction("Login");
+            return View();
         }
 
         [HttpGet]
         public IActionResult Register()
         {
-            return View(); // แสดงฟอร์มสมัครสมาชิก
+            return View();
         }
 
-        // Action Method ที่รับข้อมูลจากฟอร์มสมัครสมาชิก (HTTP POST)
         [HttpPost]
         public IActionResult Register(string username, string email, string password, string cpassword)
         {
-            // ตรวจสอบว่า รหัสผ่านที่กรอกสองครั้งตรงกันหรือไม่
             if (password != cpassword)
             {
-                ModelState.AddModelError("Cpassword", "Passwords do not match."); // ถ้าไม่ตรงให้แสดงข้อความผิดพลาด
-                TempData["AlertMessage"] = "Passwords do not match, Please try again.";
-                return View(); // ส่งกลับไปที่หน้าฟอร์มสมัครสมาชิก
+                TempData["AlertMessage"] = "Password ไม่ตรงกัน โปรดลองใหม่อีกครั้ง";
+                TempData["AlertType"] = "error";
+                return View();
             }
 
-            // ตรวจสอบว่ามีผู้ใช้หรืออีเมลนี้ในระบบแล้วหรือไม่
             if (_context.UserTable.Any(u => u.userName == username || u.userEmail == email))
             {
-                ModelState.AddModelError("DuplicateUser", "Username or Email already exists."); // ถ้ามีให้แสดงข้อความผิดพลาด
-                TempData["AlertMessage"] = "Username or Email already exists, Please try again.";
+                TempData["AlertMessage"] = "มี Username หรือ Email นี้อยู่แล้ว กรุณาใช้ชื่ออื่น";
+                TempData["AlertType"] = "error";
                 return View();
             }
 
             try
             {
-                // สร้างผู้ใช้ใหม่
                 var newUser = new UserTable
                 {
-                    userName = username, // กำหนดชื่อผู้ใช้
-                    userEmail = email,       // กำหนดอีเมล
-                    userPassword = password, // เก็บรหัสผ่าน (ควรเก็บแบบเข้ารหัสในโปรดักชัน)
-                    userRole = "User"        // กำหนดบทบาทผู้ใช้เป็น User
+                    userName = username,
+                    userEmail = email,
+                    userPassword = password,
+                    userRole = "User"
                 };
 
-                _context.UserTable.Add(newUser); // เพิ่มผู้ใช้ใหม่ในฐานข้อมูล
-                _context.SaveChanges(); // บันทึกการเปลี่ยนแปลงในฐานข้อมูล
+                _context.UserTable.Add(newUser);
+                _context.SaveChanges();
 
-                // เปลี่ยนเส้นทางไปที่หน้า Login หลังจากสมัครสมาชิกสำเร็จ
-                TempData["AlertMessage"] = "Access Granted. Please Login.";
-                return RedirectToAction("Login", "Account");
+                TempData["AlertMessage"] = "สมัครสมาชิกสำเร็จ";
+                TempData["AlertType"] = "success";
+
+                //return RedirectToAction("Login", "Account");
+                return View();
             }
             catch (Exception ex)
             {
-                // ถ้ามีข้อผิดพลาดในการสมัครสมาชิก ให้แสดงข้อความผิดพลาด
-                ViewBag.ErrorMessage = ex.InnerException?.Message ?? ex.Message;
-                TempData["AlertMessage"] = "Error: " + (ex.InnerException?.Message ?? ex.Message);
+                TempData["AlertMessage"] = "มีข้อผิดพลาดของระบบ" + ex.InnerException?.Message ?? ex.Message;
+                TempData["AlertType"] = "error";
+
                 return View();
             }
         }

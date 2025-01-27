@@ -41,3 +41,27 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @if (TempData["AlertMessage"] != null)
+    {
+        <script>
+            Swal.fire({
+                title: 'แจ้งเตือน',
+                text: '@Html.Raw(TempData["AlertMessage"])',
+                icon: '@TempData["AlertType"]',
+                confirmButtonText: 'OK',
+                allowOutsideClick: true,
+                showCancelButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            }).then((result) => {
+                if (@TempData["AlertType"] == "error"){
+                    return view;
+                }
+
+                window.location.href = '@Url.Action("Login", "Account")';
+            });
+        </script>
+    }
+}
