@@ -8,18 +8,25 @@
 </div>
 
 <div class="container my-4">
-    <!-- Add New Button -->
+
+    @* <div class="d-flex"> *@
+    @*     <a href="@Url.Action("Index")" class="btn btn-primary mb-3 w-100" style="font-size: 18px;"> *@
+    @*         เพิ่มข้อมูล *@
+    @*     </a> *@
+    @* </div> *@
+
+    @* Add *@
     <div class="d-flex justify-content-end">
-        <button class="btn btn-primary mb-3" style="font-size: 18px;" data-bs-toggle="modal" data-bs-target="#addGameModal">
+        <button class="btn btn-primary mb-3 w-100" style="font-size: 18px;" data-bs-toggle="modal" data-bs-target="#addGameModal">
             เพิ่มข้อมูล
         </button>
     </div>
 
-    <!-- Add -->
+    @* Create *@
     <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="addGameModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form asp-action="Create" method="post">
+                <form asp-action="" method="post">
                     <div class="modal-header">
                         <h5 class="modal-title" id="addGameModalLabel">เพิ่มเกมใหม่</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิดหน้าต่าง"></button>
@@ -51,7 +58,6 @@
         </div>
     </div>
 
-    <!-- Table -->
     <table class="table table-striped table-bordered text-center align-middle">
         <thead class="table-dark">
             <tr>
@@ -66,7 +72,6 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
-                @* int index = 1; *@
                 foreach (var game in Model)
                 {
                     <tr class="table-secondary">
@@ -78,6 +83,12 @@
                         <td style="font-size: 18px;">@game.gameStock</td>
                         <td style="font-size: 18px;">@game.gamePrice</td>
                         <td>
+                            @* <a href="@Url.Action("Index", new { id = game.gameId })" class="btn btn-sm btn-warning w-30" style="font-size: 18px;"> *@
+                            @*     แก้ไข *@
+                            @* </a> *@
+                            @* <a href="@Url.Action("Index", new { id = game.gameId })" class="btn btn-sm btn-danger w-30" style="font-size: 18px;"> *@
+                            @*     ลบ *@
+                            @* </a> *@
                             <button class="btn btn-sm btn-warning w-30" style="font-size: 18px;" data-bs-toggle="modal" data-bs-target="#editGameModal-@game.gameId">
                                 แก้ไข
                             </button>
@@ -87,11 +98,11 @@
                         </td>
                     </tr>
 
-                    <!-- Edit -->
+                    @* Edit *@
                     <div class="modal fade" id="editGameModal-@game.gameId" tabindex="-1" aria-labelledby="editGameModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <form asp-action="Edit" asp-route-id="@game.gameId" method="post">
+                                <form asp-action="" asp-route-id="@game.gameId" method="post">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="editGameModalLabel">แก้ไขข้อมูล</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิดหน้าต่าง"></button>
@@ -119,11 +130,11 @@
                         </div>
                     </div>
 
-                    <!-- Delete -->
+                    @* Delete *@
                     <div class="modal fade" id="deleteGameModal-@game.gameId" tabindex="-1" aria-labelledby="deleteGameModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <form asp-action="Delete" asp-route-id="@game.gameId" method="post">
+                                <form asp-action="" asp-route-id="@game.gameId" method="post">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="deleteGameModalLabel">ลบข้อมูล</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิดหน้าต่าง"></button>

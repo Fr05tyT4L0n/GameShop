@@ -17,14 +17,16 @@
                     <div class="card-body d-flex flex-column" style="background: #222831;">
                         <p class="card-text text-white">ประเภท : <strong>@game.category.categoryName</strong></p>
                         <h5 class="card-title">@game.gameName</h5>
-                        @* <p class="card-text text-muted">เกี่ยวกับเกมนั้น อธิบาย...</p> *@
                         <div class="d-flex justify-content-between py-2 mt-auto">
                             <p class="card-text mb-0">คงเหลือ : <strong class="text-success">@game.gameStock</strong> ชิ้น</p>
                             <p class="card-text mb-0">ราคา : <strong class="text-danger">@game.gamePrice</strong> บาท</p>
                         </div>
                     </div>
                     <div class="card-footer" style="background: #181C22;">
-                        <a href="/" class="btn w-100 text-white btn-custom">สั่งซื้อ</a>
+                        @* <a href="/" class="btn w-100 text-white btn-custom">สั่งซื้อ</a> *@
+                        <button class="btn w-100 text-white btn-custom" onclick="addToCart('@game.gameId', '@game.gameName', @game.gamePrice, '@game.gameImage')">
+                            สั่งซื้อ
+                        </button>
                     </div>
                 </div>
             </div>
@@ -42,3 +44,4 @@
         background: #006469;
     }
 </style>
+

@@ -15,13 +15,12 @@ namespace GameShop.Controllers
         {
             _context = context;
         }
-
         public IActionResult Create()
         {
             return View();
         }
 
-        public IActionResult Update()
+        public IActionResult Edit()
         {
             return View();
         }
