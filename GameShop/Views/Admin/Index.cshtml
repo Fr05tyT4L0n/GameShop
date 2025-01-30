@@ -4,14 +4,14 @@
 }
 
 <div class="container">
-    <h1>ระบบควบคุม</h1>
+    <h2 class="text-white text-center">ระบบควบคุม</h2>
 </div>
 
 <div class="container my-4">
     <!-- Add New Button -->
     <div class="d-flex justify-content-end">
-        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addGameModal">
-            เพิ่มเกมใหม่
+        <button class="btn btn-primary mb-3" style="font-size: 18px;" data-bs-toggle="modal" data-bs-target="#addGameModal">
+            เพิ่มข้อมูล
         </button>
     </div>
 
@@ -69,19 +69,19 @@
                 @* int index = 1; *@
                 foreach (var game in Model)
                 {
-                    <tr>
-                        <td>@game.gameId</td>
+                    <tr class="table-secondary">
+                        <td style="font-size: 18px;">@game.gameId</td>
                         <td class="text-center">
                             <img src="@game.gameImage" alt="@game.gameName" style="width: 100px; height: 100px; object-fit: cover;">
                         </td>
-                        <td>@game.gameName</td>
-                        <td>@game.gameStock</td>
-                        <td>@game.gamePrice</td>
+                        <td style="font-size: 18px;">@game.gameName</td>
+                        <td style="font-size: 18px;">@game.gameStock</td>
+                        <td style="font-size: 18px;">@game.gamePrice</td>
                         <td>
-                            <button class="btn btn-sm btn-warning w-30" data-bs-toggle="modal" data-bs-target="#editGameModal-@game.gameId">
+                            <button class="btn btn-sm btn-warning w-30" style="font-size: 18px;" data-bs-toggle="modal" data-bs-target="#editGameModal-@game.gameId">
                                 แก้ไข
                             </button>
-                            <button class="btn btn-sm btn-danger w-30" data-bs-toggle="modal" data-bs-target="#deleteGameModal-@game.gameId">
+                            <button class="btn btn-sm btn-danger w-30" style="font-size: 18px;" data-bs-toggle="modal" data-bs-target="#deleteGameModal-@game.gameId">
                                 ลบ
                             </button>
                         </td>
