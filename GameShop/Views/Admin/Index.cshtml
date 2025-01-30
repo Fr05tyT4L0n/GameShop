@@ -81,7 +81,7 @@
                         </td>
                         <td style="font-size: 18px;">@game.gameName</td>
                         <td style="font-size: 18px;">@game.gameStock</td>
-                        <td style="font-size: 18px;">@game.gamePrice</td>
+                        <td style="font-size: 18px;">@game.gamePrice.ToString("#,##0.##")</td>
                         <td>
                             @* <a href="@Url.Action("Index", new { id = game.gameId })" class="btn btn-sm btn-warning w-30" style="font-size: 18px;"> *@
                             @*     แก้ไข *@

@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|c:\\users\\takdanai duangporn\\documents\\z_c# mvc\\update\\gameshop\\gameshop\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|c:\\users\\takdanai duangporn\\documents\\z_c# mvc\\update\\gameshop\\gameshop\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|c:\\users\\takdanai duangporn\\documents\\z_c# mvc\\update\\gameshop\\gameshop\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|c:\\users\\takdanai duangporn\\documents\\z_c# mvc\\update\\gameshop\\gameshop\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|c:\\users\\takdanai duangporn\\documents\\z_c# mvc\\update\\gameshop\\gameshop\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|c:\\users\\takdanai duangporn\\documents\\z_c# mvc\\update\\gameshop\\gameshop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80A64792-CEF6-4446-942D-FDEDD28BE130}|GameShop\\GameShop.csproj|solutionrelative:gameshop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +34,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "GameShop\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "GameShop\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T15:43:46.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "GameShop\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "GameShop\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T15:42:33.057Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,33 +70,33 @@
               "RelativeDocumentMoniker": "GameShop\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "GameShop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAKgAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-30T11:48:53.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Game\\Index.cshtml",
               "RelativeDocumentMoniker": "GameShop\\Views\\Game\\Index.cshtml",
               "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Game\\Index.cshtml",
               "RelativeToolTip": "GameShop\\Views\\Game\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-30T11:43:44.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "GameShop\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "GameShop\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAFMAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-30T11:01:09.683Z",
               "EditorCaption": ""
@@ -75,7 +109,7 @@
               "RelativeDocumentMoniker": "GameShop\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\Controllers\\AdminController.cs",
               "RelativeToolTip": "GameShop\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-30T11:01:02.941Z",
               "EditorCaption": ""

@@ -19,7 +19,7 @@
                         <h5 class="card-title">@game.gameName</h5>
                         <div class="d-flex justify-content-between py-2 mt-auto">
                             <p class="card-text mb-0">คงเหลือ : <strong class="text-success">@game.gameStock</strong> ชิ้น</p>
-                            <p class="card-text mb-0">ราคา : <strong class="text-danger">@game.gamePrice</strong> บาท</p>
+                            <p class="card-text mb-0">ราคา : <strong class="text-danger">@game.gamePrice.ToString("#,##0.##")</strong> บาท</p>
                         </div>
                     </div>
                     <div class="card-footer" style="background: #181C22;">
@@ -44,4 +44,3 @@
         background: #006469;
     }
 </style>
-

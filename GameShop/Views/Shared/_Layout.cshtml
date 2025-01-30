@@ -76,11 +76,11 @@
     </footer>
 
     <div class="modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="cartModalLabel">ตะกร้าของคุณ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิดหน้าต่าง"></button>
                 </div>
                 <div class="modal-body">
                     <table class="table table-bordered">
@@ -98,12 +98,12 @@
                         </tbody>
                     </table>
                     <div id="cart-total" class="text-right">
-                        <strong>Total: 0 บาท</strong>
+                        <strong>ราคารวมทั้งหมด : 0 บาท</strong>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-danger" onclick="clearCart()">🗑️ ล้างตะกร้าสินค้า</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                    <button class="btn btn-danger" onclick="clearCart()"> ล้างตะกร้าสินค้า</button>
                 </div>
             </div>
         </div>
@@ -155,8 +155,8 @@
             cartItemsElement.innerHTML = '';
 
             if (cart.length === 0) {
-                cartItemsElement.innerHTML = '<tr><td colspan="5" class="text-center">Your cart is empty!</td></tr>';
-                cartTotalElement.innerHTML = '<strong>Total: 0 บาท</strong>';
+                cartItemsElement.innerHTML = '<tr><td colspan="5" class="text-center">ตะกร้าของคุณว่างเปล่า</td></tr>';
+                cartTotalElement.innerHTML = '<strong>ราคารวมทั้งหมด : 0 บาท</strong>';
             } else {
                 cart.forEach(item => {
                     const itemTotal = item.gamePrice * item.quantity;
@@ -165,14 +165,14 @@
                         <tr>
                             <td><img src="${item.gameImage}" alt="${item.gameName}" style="width: 50px; height: 50px; object-fit: cover;"></td>
                             <td>${item.gameName}</td>
-                            <td>${item.gamePrice} บาท</td>
-                            <td>${item.quantity}</td>
-                            <td>${itemTotal} บาท</td>
+                            <td>${item.gamePrice.toLocaleString()} บาท</td>
+                            <td>${item.quantity.toLocaleString()}</td>
+                            <td>${itemTotal.toLocaleString()} บาท</td>
                         </tr>
                     `;
                 });
 
-                cartTotalElement.innerHTML = `<strong>Total: ${totalAmount} บาท</strong>`;
+                cartTotalElement.innerHTML = `<strong>ราคารวมทั้งหมด : ${totalAmount.toLocaleString()} บาท</strong>`;
             }
 
             var myModal = new bootstrap.Modal(document.getElementById('cartModal'));
