@@ -82,5 +82,128 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
+    <script>
+        function addToCart(gameId, gameName, gamePrice, gameImage) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            let existingGame = cart.find(item => item.gameId === gameId);
+            if (existingGame) {
+                existingGame.quantity++;
+            } else {
+                cart.push({
+                    gameId: gameId,
+                    gameName: gameName,
+                    gamePrice: gamePrice,
+                    gameImage: gameImage,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").innerText = cartCount;
+        }
+
+        function viewCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartHTML = "<h3>ตะกร้าสินค้า</h3><ul class='list-group'>";
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                let itemTotal = item.gamePrice * item.quantity;
+                totalPrice += itemTotal;
+
+                cartHTML += `
+                    <li class='list-group-item'>
+                        <div class='d-flex align-items-center'>
+                            <img src='${item.gameImage}' alt='${item.gameName}' style='width: 50px; height: 50px; object-fit: cover;' class="me-3" />
+                            <div class="d-flex flex-column flex-grow-1">
+                                <span><strong>${item.gameName}</strong></span>
+                                <div class="d-flex justify-content-between">
+                                    <span>${item.gamePrice.toLocaleString()} บาท</span>
+                                    <span>จำนวน:
+                                        <button class="btn btn-sm btn-warning" onclick="changeQuantity('${item.gameId}', 'decrease')">-</button>
+                                        <span class="quantity">${item.quantity}</span>
+                                        <button class="btn btn-sm btn-success" onclick="changeQuantity('${item.gameId}', 'increase')">+</button>
+                                    </span>
+                                    <span>ราคารวม : ${itemTotal.toLocaleString()} บาท</span>
+                                </div>
+                            </div>
+                            <button class='btn btn-danger btn-sm ms-2' onclick='removeFromCart("${item.gameId}")'>ลบ</button>
+                        </div>
+                    </li>
+                `;
+            });
+
+            // แสดงราคารวมของตะกร้า
+            cartHTML += `
+                <li class='list-group-item d-flex justify-content-between'>
+                    <strong>ราคารวมทั้งหมด :</strong>
+                    <span class="text-danger">${totalPrice.toLocaleString()} บาท</span>
+                </li>
+            `;
+
+            // เพิ่มปุ่ม Checkout
+            cartHTML += `
+                <li class='list-group-item text-center'>
+                    <button class="btn btn-success" onclick="checkout()">Checkout</button>
+                </li>
+            `;
+
+            cartHTML += "</ul>";
+
+            Swal.fire({
+                html: cartHTML,
+                showCloseButton: true,
+                showConfirmButton: false,
+            });
+        }
+
+        function removeFromCart(gameId) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart = cart.filter(item => item.gameId !== gameId);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+            viewCart();
+        }
+
+        function changeQuantity(gameId, action) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let game = cart.find(item => item.gameId === gameId);
+
+            if (game) {
+                if (action === 'increase') {
+                    game.quantity++;
+                } else if (action === 'decrease' && game.quantity > 1) {
+                    game.quantity--;
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+                viewCart();
+            }
+        }
+
+        function checkout() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart.length === 0) {
+                Swal.fire("ไม่มีสินค้าในตะกร้า", "ไม่มีสินค้าไม่สามารถทำรายการได้", "warning");
+            } else {
+                // โค้ดสำหรับการไปหน้า checkout หรือขั้นตอนการชำระเงิน
+                Swal.fire("Checkout", "ยังไม่มีระบบ", "info");
+            }
+        }
+
+    </script>
+
 </body>
 </html>
+
+
+

@@ -24,6 +24,9 @@
                     </div>
                     <div class="card-footer" style="background: #181C22;">
                         @* <a href="/" class="btn w-100 text-white btn-custom">สั่งซื้อ</a> *@
+                        @* <button class="btn w-100 text-white btn-custom" onclick="addToCart('@game.gameId', '@game.gameName', @game.gamePrice, '@game.gameImage')"> *@
+                        @*     สั่งซื้อ *@
+                        @* </button> *@
                         <button class="btn w-100 text-white btn-custom" onclick="addToCart('@game.gameId', '@game.gameName', @game.gamePrice, '@game.gameImage')">
                             สั่งซื้อ
                         </button>
@@ -44,3 +47,5 @@
         background: #006469;
     }
 </style>
+
+        

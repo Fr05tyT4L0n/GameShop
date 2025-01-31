@@ -27,3 +27,17 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.swal2-popup {
+    width: 80% !important;
+    max-width: 800px !important;
+    padding: 30px;
+}
+
+.swal2-html-container {
+    font-size: 18px;
+}
+
+.swal2-title {
+    font-size: 24px;
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SaTpF+KEMU5WTrTZ7KgsD7VFOxbCpmSJnMV18kk+YL8=",
+  "Hash": "Trab1KCwG6FCQVD4vXwhGhmqAEgP6bQxlqE7fYQe5x4=",
   "Source": "GameShop",
   "BasePath": "_content/GameShop",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "v4tc0viu9p",
-      "Integrity": "gWWV+7WqyWvKvr/glOA6oDHmL1AVGld/H/9lX57L43E=",
+      "Fingerprint": "dfwclixqen",
+      "Integrity": "KXywQuaSZyc20GlhpYSJGnDgcHG+C2CVSvGlcWIP2FE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1331,7 +1331,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "637"
+          "Value": "837"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1339,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gWWV+7WqyWvKvr/glOA6oDHmL1AVGld/H/9lX57L43E=\""
+          "Value": "\"KXywQuaSZyc20GlhpYSJGnDgcHG+C2CVSvGlcWIP2FE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Jan 2025 09:37:01 GMT"
+          "Value": "Fri, 31 Jan 2025 14:16:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,12 +1353,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gWWV+7WqyWvKvr/glOA6oDHmL1AVGld/H/9lX57L43E="
+          "Value": "sha256-KXywQuaSZyc20GlhpYSJGnDgcHG+C2CVSvGlcWIP2FE="
         }
       ]
     },
     {
-      "Route": "css/site.v4tc0viu9p.css",
+      "Route": "css/site.dfwclixqen.css",
       "AssetFile": "C:\\Users\\Takdanai Duangporn\\Documents\\z_C# MVC\\Update\\GameShop\\GameShop\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1368,7 +1368,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "637"
+          "Value": "837"
         },
         {
           "Name": "Content-Type",
@@ -1376,11 +1376,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gWWV+7WqyWvKvr/glOA6oDHmL1AVGld/H/9lX57L43E=\""
+          "Value": "\"KXywQuaSZyc20GlhpYSJGnDgcHG+C2CVSvGlcWIP2FE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 30 Jan 2025 09:37:01 GMT"
+          "Value": "Fri, 31 Jan 2025 14:16:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1390,7 +1390,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "v4tc0viu9p"
+          "Value": "dfwclixqen"
         },
         {
           "Name": "label",
@@ -1398,7 +1398,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-gWWV+7WqyWvKvr/glOA6oDHmL1AVGld/H/9lX57L43E="
+          "Value": "sha256-KXywQuaSZyc20GlhpYSJGnDgcHG+C2CVSvGlcWIP2FE="
         }
       ]
     },
