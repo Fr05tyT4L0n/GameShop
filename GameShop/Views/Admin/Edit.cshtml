@@ -1,0 +1,74 @@
+﻿@model GameShop.Models.GameTable
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@* <h1>Edit</h1> *@
+
+<div class="container my-4">
+    <h2 class="text-center text-white mb-3">แก้ไขข้อมูลเกม</h2>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="gameId" />
+
+        <div class="form-group mb-3">
+            <label for="gameName" class="form-label text-white">ชื่อเกม</label>
+            <input type="text" class="form-control my-2" id="gameName" name="gameName" value="@Model.gameName" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="gameImage" class="form-label text-white">ลิงค์รูปภาพเกม</label>
+            <input type="text" class="form-control my-2" id="gameImage" name="gameImage" value="@Model.gameImage" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="gameStock" class="form-label text-white">จำนวนสต็อก</label>
+            <input type="number" class="form-control my-2" id="gameStock" name="gameStock" value="@Model.gameStock" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="gamePrice" class="form-label text-white">ราคา</label>
+            <input type="text" class="form-control my-2" id="gamePrice" name="gamePrice" value="@Model.gamePrice" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="categoryId" class="form-label text-white">หมวดหมู่</label>
+            <label class="text-white" for="categoryId"></label>
+            <div class="my-2"></div>
+            @Html.DropDownListFor(model => model.categoryId,
+                     new SelectList(
+                        new[] {
+                            new { Id = 1, Name = "Action" },
+                            new { Id = 2, Name = "Adventure" },
+                            new { Id = 3, Name = "RPGs" },
+                            new { Id = 3, Name = "Sandbox" },
+                            new { Id = 3, Name = "Fighting" },
+                            new { Id = 3, Name = "Party" }
+                        }, "Id", "Name", Model.categoryId),
+                    "-- เลือกหมวดหมู่ --",
+                    new { @class = "form-control" })
+        </div>
+
+        <div class="form-group d-flex justify-content-center mt-4">
+            <button type="submit" class="btn btn-success w-100">บันทึกการเปลี่ยนแปลง</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @if (TempData["AlertMessage"] != null)
+    {
+        <script>
+            Swal.fire({
+                title: 'แจ้งเตือน',
+                text: '@Html.Raw(TempData["AlertMessage"])',
+                icon: '@TempData["AlertType"]',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                if ('@TempData["AlertType"]' === 'success') {
+                    window.location.href = '@Url.Action("Index", "Admin")'; // Redirect to Index on success
+                }
+            });
+        </script>
+    }
+}

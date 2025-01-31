@@ -1,0 +1,59 @@
+﻿@model GameShop.Models.GameTable
+@{
+    ViewData["Title"] = "Create";
+}
+
+@* <h1>Create</h1> *@
+
+<div class="container my-4">
+    <form asp-action="Create" method="post">
+        <h2 class="d-flex align-items-center justify-content-center mb-3 text-white">เพิ่มเกมใหม่</h2>
+
+        <div class="form-group mb-3">
+            <label class="text-white" for="gameImage">ลิงค์รูปภาพเกม</label>
+            <input type="text" id="gameImage" name="gameImage" class="form-control my-3" placeholder="gameImage" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="text-white" for="gameName">ชื่อเกม</label>
+            <input type="text" id="gameName" name="gameName" class="form-control my-3" placeholder="gameName" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="text-white" for="gamePrice">ราคา</label>
+            <input type="text" id="gamePrice" name="gamePrice" class="form-control my-3" placeholder="gamePrice" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="text-white" for="gameStock">จำนวนสต็อก</label>
+            <input type="text" id="gameStock" name="gameStock" class="form-control my-3" placeholder="gameStock" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="text-white" for="categoryId">หมวดหมู่</label>
+            <input type="text" id="categoryId" name="categoryId" class="form-control my-3" placeholder="categoryId" required />
+        </div>
+
+        <div class="form-group d-flex justify-content-center">
+            <button type="submit" class="btn btn-success w-100 mt-2">เพิ่มเกม</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @if (TempData["AlertMessage"] != null)
+    {
+        <script>
+            Swal.fire({
+                title: 'Notification',
+                text: '@Html.Raw(TempData["AlertMessage"])',
+                icon: '@TempData["AlertType"]',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                if ('@TempData["AlertType"]' === 'success') {
+                    window.location.href = '@Url.Action("Index", "Admin")'; // Redirect to the index page
+                }
+            });
+        </script>
+    }
+}

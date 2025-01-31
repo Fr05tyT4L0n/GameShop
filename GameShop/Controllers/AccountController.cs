@@ -51,16 +51,6 @@ namespace GameShop.Controllers
             TempData["AlertMessage"] = "เข้าสู่ระบบสำเร็จ";
             TempData["AlertType"] = "success";
 
-            //if (user.userRole == "Admin")
-            //{
-            //    return RedirectToAction("Index", "Admin");
-            //}
-            //else
-            //{
-            //    return RedirectToAction("Index", "Game");
-            //}
-
-            //return RedirectToAction("Login");
             return View();
         }
 

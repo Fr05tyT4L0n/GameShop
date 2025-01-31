@@ -75,124 +75,12 @@
         </div>
     </footer>
 
-    <div class="modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">ตะกร้าของคุณ</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิดหน้าต่าง"></button>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody id="cart-items">
-                            
-                        </tbody>
-                    </table>
-                    <div id="cart-total" class="text-right">
-                        <strong>ราคารวมทั้งหมด : 0 บาท</strong>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
-                    <button class="btn btn-danger" onclick="clearCart()"> ล้างตะกร้าสินค้า</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-    <script>
-        function getCart() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            return cart;
-        }
-
-        function saveCart(cart) {
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        function addToCart(gameId, gameName, gamePrice, gameImage) {
-            const cart = getCart();
-
-            const existingItem = cart.find(item => item.gameId === gameId);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ gameId, gameName, gamePrice, gameImage, quantity: 1 });
-            }
-
-            saveCart(cart);
-            updateCartCount();
-        }
-
-        function updateCartCount() {
-            const cart = getCart();
-            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-            document.getElementById('cart-count').innerText = cartCount;
-        }
-
-        function viewCart() {
-            const cart = getCart();
-            const cartItemsElement = document.getElementById('cart-items');
-            const cartTotalElement = document.getElementById('cart-total');
-            let totalAmount = 0;
-
-            cartItemsElement.innerHTML = '';
-
-            if (cart.length === 0) {
-                cartItemsElement.innerHTML = '<tr><td colspan="5" class="text-center">ตะกร้าของคุณว่างเปล่า</td></tr>';
-                cartTotalElement.innerHTML = '<strong>ราคารวมทั้งหมด : 0 บาท</strong>';
-            } else {
-                cart.forEach(item => {
-                    const itemTotal = item.gamePrice * item.quantity;
-                    totalAmount += itemTotal;
-                    cartItemsElement.innerHTML += `
-                        <tr>
-                            <td><img src="${item.gameImage}" alt="${item.gameName}" style="width: 50px; height: 50px; object-fit: cover;"></td>
-                            <td>${item.gameName}</td>
-                            <td>${item.gamePrice.toLocaleString()} บาท</td>
-                            <td>${item.quantity.toLocaleString()}</td>
-                            <td>${itemTotal.toLocaleString()} บาท</td>
-                        </tr>
-                    `;
-                });
-
-                cartTotalElement.innerHTML = `<strong>ราคารวมทั้งหมด : ${totalAmount.toLocaleString()} บาท</strong>`;
-            }
-
-            var myModal = new bootstrap.Modal(document.getElementById('cartModal'));
-            myModal.show();
-        }
-
-        function clearCart() {
-            localStorage.removeItem('cart');
-            updateCartCount();
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            document.getElementById("cart-container").innerHTML = "<p>ไม่มีสินค้าในตะกร้า</p>";
-        }
-
-        window.onload = function() {
-            updateCartCount();
-        }
-    </script>
 
 </body>
 </html>
